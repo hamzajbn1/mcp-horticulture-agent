@@ -1,0 +1,48 @@
+# ---------------------------
+# Environment Variables (CRITICAL)
+# ---------------------------
+.env
+
+# ---------------------------
+# Python Cache & Compiled Files
+# ---------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---------------------------
+# Virtual Environments
+# ---------------------------
+.venv/
+venv/
+env/
+.conda/
+
+# ---------------------------
+# Type Checking & Testing Caches
+# ---------------------------
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---------------------------
+# IDEs & Code Editors
+# ---------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------------------------
+# OS Generated Files
+# ---------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ---------------------------
+# Personal/Temporary Notes
+# ---------------------------
+run.txt

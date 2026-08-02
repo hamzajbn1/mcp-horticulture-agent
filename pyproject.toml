@@ -1,0 +1,50 @@
+[project]
+name = "horticulture-tracker"
+version = "0.1.0"
+description = "Local-first agentic horticulture tracker: LangGraph client + FastMCP tool server, powered entirely by a local Ollama model."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Horticulture Platform Team" }]
+
+dependencies = [
+    "fastmcp>=2.3,<3.0",
+    "langchain-core>=0.3,<0.4",
+    "langchain-ollama>=0.2,<0.4",
+    "langchain-mcp-adapters>=0.1,<0.2",
+    "langgraph>=0.3,<0.6",
+    "pydantic>=2.7,<3.0",
+    "pydantic-settings>=2.3,<3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+    "mypy>=1.11",
+]
+
+[tool.uv]
+# Reproducible resolution; commit uv.lock to version control.
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC", "T20"]  # T20 forbids print()
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+# langchain-mcp-adapters ships no py.typed marker yet; scope the ignore tightly
+# rather than weakening strictness project-wide.
+[[tool.mypy.overrides]]
+module = ["langchain_mcp_adapters.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
