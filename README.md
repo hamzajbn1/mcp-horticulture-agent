@@ -25,4 +25,7 @@ The agent operates on a continuous reasoning loop, evaluating user input to dete
 * **Validation:** Pydantic (Strict schema enforcement)
 
 ## 🚀 Quick Start
-*(Add your installation and run instructions here, like `conda activate 1_agent_env` and `python main.py`)*
+**1. Clone the repository:**
+```bash
+git clone [https://github.com/hamzajbn1/mcp-horticulture-agent.git](https://github.com/hamzajbn1/mcp-horticulture-agent.git)
+cd mcp-horticulture-agent
