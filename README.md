@@ -23,9 +23,3 @@ The agent operates on a continuous reasoning loop, evaluating user input to dete
 * **Local LLM:** Ollama (qwen2.5)
 * **Language:** Python 3.11+
 * **Validation:** Pydantic (Strict schema enforcement)
-
-## 🚀 Quick Start
-**1. Clone the repository:**
-```bash
-git clone [https://github.com/hamzajbn1/mcp-horticulture-agent.git](https://github.com/hamzajbn1/mcp-horticulture-agent.git)
-cd mcp-horticulture-agent
